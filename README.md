@@ -1,3 +1,3 @@
-# WP Admin Media Uploader for WordPress
+# WP Admin Tabs for WordPress
 
-WP Admin Media Uploader is a WordPress admin component.
+WP Admin Tabs is a WordPress admin component.
