@@ -10,4 +10,4 @@
  */
 
 include 'assets.php';
-include 'functions/function.the-tabs.php';
+include 'functions/function.admin-tabs.php';
