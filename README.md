@@ -1,2 +1,3 @@
-# wp-admin-tabs
-Plugin adds the ability to insert tabs in admin.
+# WP Admin Media Uploader for WordPress
+
+WP Admin Media Uploader is a WordPress admin component.

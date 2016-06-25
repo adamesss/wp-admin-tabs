@@ -1,0 +1,42 @@
+/*
+ * WP Admin Tabs
+ */
+
+.tab-container-without-js .nav-tab-wrapper {
+	display: none;
+}
+.tab-container-without-js .hidden {
+	display: block !important;
+}
+.tab-container-js .nav-tab-wrapper {
+	margin-top: 20px;
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 0;
+	padding-left: 0;
+}
+.tab-container .tab-content {
+	padding: 10px 0 20px;
+	margin-bottom: 30px;
+	font-size: 14px;
+}
+.tab-container-js .tab-content {
+	padding: 10px 15px 20px;
+	border-bottom: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+}
+.tab-container-js .tab-content .form-table th {
+	width: 184px;
+}
+.tab-container .tab-content p {
+	font-size: inherit;
+}
+@media (min-width: 783px){
+	.tab-container .tab-text {
+		padding-top: 0.66em;
+	}
+}
+
+.nav-tab-active {
+	box-shadow: none !important;
+}

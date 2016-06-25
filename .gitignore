@@ -1,0 +1,16 @@
+/*
+
+# Files
+!.gitignore
+!assets.php
+!autoloader.php
+!index.php
+!LICENSE.md
+!README.md
+!screenshot.png
+
+# Folders
+!/assets
+!/classes
+!/functions
+!/themplates
