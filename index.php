@@ -9,5 +9,8 @@
  * License: MIT License
  */
 
-include 'assets.php';
+// Assets
+include 'assets/index.php';
+
+// Functions
 include 'functions/functions-admin-tabs.php';
