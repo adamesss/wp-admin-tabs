@@ -12,5 +12,5 @@
 // Assets
 include 'assets/index.php';
 
-// Functions
-include 'functions/functions-admin-tabs.php';
+// Includes
+include 'includes/functions-admin-tabs.php';
