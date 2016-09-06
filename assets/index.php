@@ -5,13 +5,27 @@ if ( ! function_exists( 'admin_tabs_assets_fields_enqueue' ) ) :
 		if ( ! did_action( 'wp_enqueue_media' ) ) {
 			wp_enqueue_media();
 		}
-		$dir_parent = basename(dirname(__DIR__));
+		$name_component = 'wp-admin-tabs';
+		$dir_component = basename(dirname(__DIR__));
+		$dir_parent = basename(dirname(dirname(__DIR__)));
 		if($dir_parent == 'plugins' || $dir_parent == 'mu-plugins'){
-			wp_enqueue_style( 'wp-admin-tabs', plugins_url( '/assets/css/wp-admin-tabs.css', __FILE__ ) );
-			wp_enqueue_script( 'wp-admin-tabs', plugins_url( '/assets/js/wp-admin-tabs.js', __FILE__ ) , array('jquery', 'hoverIntent') );
+			wp_enqueue_style(
+				$name_component,
+				plugins_url( '/css/' . $name_component . '.css', __FILE__ )
+			);
+			wp_enqueue_script(
+				$name_component,
+				plugins_url( '/js/' . $name_component . '.js', __FILE__ ) , array('jquery', 'hoverIntent')
+			);
 		} else {
-			wp_enqueue_style( 'wp-admin-tabs', get_template_directory_uri() . '/components/wp-admin-tabs/assets/css/wp-admin-tabs.css' );
-			wp_enqueue_script( 'wp-admin-tabs', get_template_directory_uri() . '/components/wp-admin-tabs/assets/js/wp-admin-tabs.js' , array('jquery') );
+			wp_enqueue_style(
+				$name_component,
+				get_template_directory_uri() . '/components/' . $dir_component . '/assets/css/' . $name_component . '.css'
+			);
+			wp_enqueue_script(
+				$name_component,
+				get_template_directory_uri() . '/components/' . $dir_component . '/assets/js/' . $name_component . '.js', array('jquery')
+			);
 		}
 	}
 endif;

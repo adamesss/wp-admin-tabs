@@ -4,8 +4,6 @@ if ( ! function_exists( 'admin_tabs' ) ) :
     function admin_tabs( $name, $titles = [], $content = []) {
         $prefix = 'tab';
         $container_id = $prefix . '-' . $name;
-        $link_class = "nav-tab";
-        $tab_class = "tab-pane hidden";
         $count = count($titles) >= count($content) ? count($titles) : count($content);
 
         $result = '<div id="' . $container_id . '" class="tab-container tab-container-without-js">';
@@ -15,7 +13,10 @@ if ( ! function_exists( 'admin_tabs' ) ) :
         for ($i = 0; $i < $count; $i++){
             if($i == 0) {
                 $link_class = "nav-tab nav-tab-active";
-                $tab_class = "";
+                $tab_class = "tab-pane";
+            } else {
+                $link_class = "nav-tab";
+                $tab_class = "tab-pane hidden";
             }
             $tab_id = $prefix . '-' . $name . '-' . $i;
             $link_href = '#' . $tab_id;
@@ -25,9 +26,10 @@ if ( ! function_exists( 'admin_tabs' ) ) :
             $result_titles .= '<a href="' . $link_href . '" class="' . $link_class . '"  role="tab">' . $link_text . '</a>';
 
             $result_content .= '<div id="' . $tab_id . '" class="' . $tab_class . '"  role="tabpanel"><table class="form-table">';
-            if($content[$i])
+            if($content[$i]){
                 $result_content .= $content[$i];
-            $result_content .= '</tables></div>';
+            }
+            $result_content .= '</table></div>';
         }
 
         $result_titles .= '</div>';

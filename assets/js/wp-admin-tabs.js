@@ -3,7 +3,7 @@
 jQuery(document).ready(function($){
 	var tabContainer = $('.tab-container');
 
-	tabContainer.addClass('.tab-container-js').removeClass('.tab-container-without-js');
+	tabContainer.addClass('tab-container-js').removeClass('tab-container-without-js');
     tabContainer.find('.nav-tab-wrapper a').click(function(e) {
 		e.preventDefault();
         var link		= $(this),
