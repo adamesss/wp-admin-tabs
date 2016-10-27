@@ -11,20 +11,28 @@ if ( ! function_exists( 'admin_tabs_assets_fields_enqueue' ) ) :
 		if($dir_parent == 'plugins' || $dir_parent == 'mu-plugins'){
 			wp_enqueue_style(
 				$name_component,
-				plugins_url( '/css/' . $name_component . '.css', __FILE__ )
+				plugins_url( '/css/' . $name_component . '.css', __FILE__ ),
+				array(),
+				null
 			);
 			wp_enqueue_script(
 				$name_component,
-				plugins_url( '/js/' . $name_component . '.js', __FILE__ ) , array('jquery', 'hoverIntent')
+				plugins_url( '/js/' . $name_component . '.js', __FILE__ ),
+				array('jquery'),
+				null
 			);
 		} else {
 			wp_enqueue_style(
 				$name_component,
-				get_template_directory_uri() . '/components/' . $dir_component . '/assets/css/' . $name_component . '.css'
+				get_template_directory_uri() . '/components/' . $dir_component . '/assets/css/' . $name_component . '.css',
+				array(),
+				null
 			);
 			wp_enqueue_script(
 				$name_component,
-				get_template_directory_uri() . '/components/' . $dir_component . '/assets/js/' . $name_component . '.js', array('jquery')
+				get_template_directory_uri() . '/components/' . $dir_component . '/assets/js/' . $name_component . '.js',
+				array('jquery'),
+				null
 			);
 		}
 	}
